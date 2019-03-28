@@ -1,0 +1,13 @@
+<mat-sidenav-container class="example-container">
+  <div href="#" class="opener-sidebar pointer"><i class="icon-right-open"></i></div>
+  <mat-sidenav #sidenav mode="side" opened="true" class="sidenav">
+    <h2>菜单</h2>
+    <mat-card><a routerLink="/table">表格</a></mat-card>
+    <mat-card><a routerLink="/form">表单</a></mat-card>
+    <mat-card><a routerLink="/panel">可展开面板</a></mat-card>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button color="primary" (click)="sidenav.toggle()">Toggle</button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
