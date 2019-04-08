@@ -1,13 +1,13 @@
 <h2 class="title">Form</h2>
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="用户名" [(value)]="formData.username">
+    <input matInput name="username" placeholder="用户名" [(ngModel)]="formData.username">
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input matInput email placeholder="邮箱" [(value)]="formData.email">
+    <input matInput email name="email" placeholder="邮箱" [(ngModel)]="formData.email">
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input type="password" matInput placeholder="密码" [(value)]="formData.password">
+    <input type="password" matInput name="password" placeholder="密码" [(ngModel)]="formData.password">
   </mat-form-field>
 
   <div class="text-right">

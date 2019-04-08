@@ -1,0 +1,19 @@
+<h2 class="title">Snack Bar</h2>
+<div class="main-container">
+  <mat-form-field>
+    <mat-label>关闭方式</mat-label>
+    <mat-select [(ngModel)]="type" (selectionChange)="chooseType(type)">
+      <mat-option [value]="1">自动关闭</mat-option>
+      <mat-option [value]="2">手动关闭</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field *ngIf="!useCustom">
+    <mat-label>Snack bar duration (seconds)</mat-label>
+    <input type="number" [(ngModel)]="durationInSeconds" matInput>
+  </mat-form-field>
+
+  <button mat-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+    Pizza party
+  </button>
+</div>
+
